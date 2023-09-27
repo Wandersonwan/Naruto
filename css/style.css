@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins' sans-serif;
+    max-width: 1280px;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+
+
+}
+.information{
+    padding-left: 30px;
+}
+
+.information .title {
+
+    letter-spacing: -3px;
+    margin-bottom: 80px;
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color:#fff;
+    
+
+}
+
+
+.information .descrition {
+    max-width: 49%;
+    font-size: 24px;
+    color: #fff;
+    line-height: 30px;
+    
+}
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.botoes-carrossel .botao {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #fff;
+
+}
+
+.botoes-carrossel .botao.selecionado {
+    background-color: #1d8346;
+}
+
+.menu-lateral {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icon {
+    filter: invert(1);
+    width: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-lateral .icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.carrossel{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}
+.carrossel .image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+.carrossel .image.ativa{
+    display: block;
+}
+@keyframes mudarImagem{
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
